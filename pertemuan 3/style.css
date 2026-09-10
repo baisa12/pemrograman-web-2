@@ -1,0 +1,273 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #202535;
+    background: #f4f0ff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f5f3ff 0%, #ffffff 55%, #ecfdf5 100%);
+}
+
+.container {
+    width: min(820px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.card {
+    padding: clamp(24px, 5vw, 48px);
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #e4def5;
+    border-radius: 20px;
+    box-shadow: 0 20px 48px rgba(91, 33, 182, 0.12);
+}
+
+h1,
+h2,
+p {
+    overflow-wrap: anywhere;
+}
+
+h1 {
+    margin: 0 0 10px;
+    color: #30205c;
+}
+
+h2 {
+    margin-top: 32px;
+    color: #3f2a73;
+    font-size: 1.2rem;
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #7c3aed;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.intro {
+    color: #5b6475;
+    line-height: 1.7;
+}
+
+code {
+    color: #be185d;
+}
+
+.menu {
+    display: grid;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.menu a {
+    display: grid;
+    gap: 5px;
+    padding: 18px 20px;
+    color: #596174;
+    text-decoration: none;
+    background: #faf9ff;
+    border: 1px solid #e4def5;
+    border-radius: 12px;
+    transition: 150ms ease;
+}
+
+.menu a:hover {
+    color: #5b21b6;
+    border-color: #c4b5fd;
+    transform: translateY(-2px);
+}
+
+.menu strong {
+    color: #6d28d9;
+}
+
+.form-grid {
+    display: grid;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+label {
+    color: #3f2a73;
+    font-weight: 700;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    font: inherit;
+    border-radius: 8px;
+}
+
+input,
+select {
+    color: #202535;
+    background: #ffffff;
+    border: 1px solid #aaa2bc;
+}
+
+button {
+    margin-top: 6px;
+    color: #ffffff;
+    font-weight: 700;
+    background: #6d28d9;
+    border: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5b21b6;
+}
+
+.result,
+.note {
+    margin-top: 24px;
+    padding: 16px 18px;
+    background: #f5f3ff;
+    border-left: 4px solid #7c3aed;
+    border-radius: 7px;
+    line-height: 1.6;
+}
+
+.result.error {
+    color: #991b1b;
+    background: #fef2f2;
+    border-color: #dc2626;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.summary div {
+    padding: 16px;
+    background: #faf9ff;
+    border: 1px solid #e4def5;
+    border-radius: 10px;
+}
+
+.summary span {
+    display: block;
+    margin-bottom: 7px;
+    color: #667085;
+    font-size: 0.85rem;
+}
+
+.summary strong {
+    color: #3f2a73;
+}
+
+.box-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.color-box {
+    min-height: 118px;
+    padding: 16px;
+    text-align: center;
+    background: #fafafa;
+    border: 2px dashed #d5d1df;
+    border-radius: 12px;
+}
+
+.color-box.active {
+    border-style: solid;
+    border-color: #7c3aed;
+    box-shadow: 0 8px 24px rgba(91, 33, 182, 0.12);
+}
+
+.ball {
+    display: block;
+    width: 42px;
+    height: 42px;
+    margin: 12px auto 0;
+    border: 3px solid rgba(0, 0, 0, 0.13);
+    border-radius: 50%;
+    box-shadow: inset -7px -7px 10px rgba(0, 0, 0, 0.15);
+}
+
+.ball.red { background: #ef4444; }
+.ball.yellow { background: #facc15; }
+.ball.blue { background: #3b82f6; }
+.ball.green { background: #22c55e; }
+.ball.purple { background: #a855f7; }
+.ball.colorless { background: linear-gradient(135deg, #fb923c, #ec4899); }
+
+.output-list {
+    margin: 24px 0 0;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #e4def5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.output-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 11px 14px;
+    border-bottom: 1px solid #eeeaf7;
+}
+
+.output-list li:last-child {
+    border-bottom: 0;
+}
+
+.day-card {
+    margin-top: 26px;
+    padding: 26px;
+    color: #ffffff;
+    text-align: center;
+    background: linear-gradient(135deg, #6d28d9, #4c1d95);
+    border-radius: 14px;
+}
+
+.day-card strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.65rem;
+}
+
+.day-card p {
+    margin-bottom: 0;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 28px;
+    color: #6d28d9;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 20px 0;
+    }
+
+    .summary,
+    .box-grid {
+        grid-template-columns: 1fr;
+    }
+}

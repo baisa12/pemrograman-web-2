@@ -1,0 +1,127 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2f261f;
+    background: #fff7ed;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #fff7ed, #ffffff 55%, #fffbeb);
+}
+
+.container {
+    width: min(780px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.card {
+    padding: clamp(24px, 5vw, 48px);
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #fed7aa;
+    border-radius: 20px;
+    box-shadow: 0 20px 48px rgba(194, 65, 12, 0.11);
+}
+
+h1 { margin: 0 0 10px; color: #7c2d12; }
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #ea580c;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.intro { color: #66584c; line-height: 1.7; }
+code { color: #be123c; }
+
+.menu {
+    display: grid;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.menu a {
+    display: grid;
+    gap: 5px;
+    padding: 18px 20px;
+    color: #66584c;
+    text-decoration: none;
+    background: #fffaf5;
+    border: 1px solid #fed7aa;
+    border-radius: 11px;
+    transition: 150ms ease;
+}
+
+.menu a:hover { border-color: #fb923c; transform: translateY(-2px); }
+.menu strong { color: #c2410c; }
+
+.file-output {
+    margin-top: 26px;
+    padding: 20px;
+    color: #e2e8f0;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    background: #292524;
+    border-radius: 10px;
+}
+
+.line-list {
+    margin-top: 26px;
+    padding-left: 0;
+    list-style-position: inside;
+    border: 1px solid #fed7aa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.line-list li { padding: 14px 16px; border-bottom: 1px solid #ffedd5; }
+.line-list li:last-child { border-bottom: 0; }
+.line-list li:nth-child(even) { background: #fff7ed; }
+
+.counter {
+    margin-top: 28px;
+    padding: 32px;
+    text-align: center;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 14px;
+}
+
+.counter strong {
+    display: block;
+    margin: 10px 0;
+    color: #c2410c;
+    font-size: clamp(3rem, 10vw, 5rem);
+    line-height: 1;
+}
+
+.note,
+.error {
+    margin-top: 24px;
+    padding: 15px 17px;
+    line-height: 1.6;
+    background: #fff7ed;
+    border-left: 4px solid #f97316;
+    border-radius: 7px;
+}
+
+.error { color: #991b1b; background: #fef2f2; border-color: #dc2626; }
+
+.back {
+    display: inline-block;
+    margin-top: 28px;
+    color: #c2410c;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 620px) {
+    .container { padding: 20px 0; }
+}

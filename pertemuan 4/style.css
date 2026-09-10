@@ -1,0 +1,134 @@
+:root {
+    color-scheme: light;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2937;
+    background: #ecfeff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ecfeff, #ffffff 55%, #f0fdfa);
+}
+
+.container {
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 48px 0;
+}
+
+.card {
+    padding: clamp(24px, 5vw, 48px);
+    background: rgba(255, 255, 255, 0.97);
+    border: 1px solid #bae6fd;
+    border-radius: 20px;
+    box-shadow: 0 20px 48px rgba(8, 145, 178, 0.12);
+}
+
+h1 { margin: 0 0 10px; color: #164e63; }
+h2 { color: #155e75; }
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #0891b2;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.intro { color: #52606f; line-height: 1.7; }
+code { color: #be123c; }
+
+.menu {
+    display: grid;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.menu a {
+    display: grid;
+    gap: 5px;
+    padding: 17px 20px;
+    color: #52606f;
+    text-decoration: none;
+    background: #f7feff;
+    border: 1px solid #bae6fd;
+    border-radius: 11px;
+    transition: 150ms ease;
+}
+
+.menu a:hover { border-color: #22d3ee; transform: translateY(-2px); }
+.menu strong { color: #0e7490; }
+
+.table-scroll { margin-top: 26px; overflow-x: auto; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 11px 13px;
+    border: 1px solid #bae6fd;
+    text-align: center;
+}
+
+thead th,
+tbody th {
+    color: #ffffff;
+    background: #0e7490;
+}
+
+tbody tr:nth-child(even) td { background: #ecfeff; }
+
+.number-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(58px, 1fr));
+    gap: 10px;
+    margin-top: 26px;
+}
+
+.number-grid span,
+.day-list li {
+    padding: 14px;
+    text-align: center;
+    background: #ecfeff;
+    border: 1px solid #a5f3fc;
+    border-radius: 9px;
+}
+
+.day-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 26px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.note {
+    margin-top: 25px;
+    padding: 15px 17px;
+    line-height: 1.65;
+    background: #ecfeff;
+    border-left: 4px solid #06b6d4;
+    border-radius: 7px;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 28px;
+    color: #0e7490;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+@media (max-width: 620px) {
+    .container { padding: 20px 0; }
+    .day-list { grid-template-columns: 1fr; }
+    th, td { padding: 8px; font-size: 0.85rem; }
+}
